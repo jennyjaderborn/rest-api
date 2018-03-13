@@ -1,46 +1,30 @@
 <?php
+parse_str(file_get_contents("php://input"), $_PUT);
 session_start();
 include 'checkHoroscope.php';
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if ($_SERVER['REQUEST_METHOD'] === 'PUT') {
+
+    if(isset($_SESSION['horoscope'])){
     session_unset('horoscope');
-    $persnr = $_POST['personNR'];
-        //checkHoroscope($persnr);
+    $persnr = $_PUT['personNR'];
+        
 
 
         if(!isset($_SESSION['horoscope'])){
-            echo "true";
+            echo true;
             $_SESSION['horoscope'] = checkHoroscope($persnr);
-            //echo $_SESSION['horoscope'];
+           
             
         }
         else {
-            echo "ditt horoskop är redan sparat!";
+            echo false;
         }
         
     }
 
+}
+
     
-
-        
-        //echo $horoscope;//det verkar fungera. nu spara $horoscope i en session!
-
-        
-    
-
-        
-
-
-
-    //print_r($_POST); den hät skriver utpersonnumret på indexsidan. 
-    //print_r($numret);
-
-   // if(!isset($_SESSION['nummer'])){
-     //   $_SESSION['nummer'] = $numret;
-    //}
-
-
-//print_r($_POST);
-
 
 ?>

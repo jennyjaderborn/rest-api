@@ -6,8 +6,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     if(isset($_SESSION['horoscope'])){
         echo "den finns";
         echo $_SESSION['horoscope'];
-
-        //print_r($_SESSION['horoscope']);
     }
 }
 

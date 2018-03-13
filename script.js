@@ -1,20 +1,17 @@
 $(document).ready(function(){
-
+    
 viewHoroscope();
 
     saveHoroscope = function() {
-    //console.log("knappen fungerar");
     var personNR = $("#personNummer").val();
-    //console.log($personNummer);
+
     if(personNR !== ""){
     $.ajax({
     type: "POST",
     url: "./addHoroscope.php",
     data: { personNR: personNR}
         })
-    .done(function(msg) {
-        //$("#myHoroscope").html(msg);
-        //alert( "Data Saved: " + msg );
+    .done(function(data) {
         location.reload();
     });
     viewHoroscope();
@@ -22,6 +19,7 @@ viewHoroscope();
 else {
     alert("skriv pers");
 }
+
 }
 
 function viewHoroscope(){
@@ -31,8 +29,8 @@ function viewHoroscope(){
         url: "./viewHoroScope.php",
             })
         .done(function( msg ) {
-            $("#myHoroscope").html(msg);
-            //alert( "Data Saved: " + msg );
+            $("#myHoroscope").html(data);
+            
         });
 }
 
@@ -43,26 +41,20 @@ deleteHoroscope = function() {
         url: "./deleteHoroscope.php",
             })
         .done(function( msg ) {
-            $("#myHoroscope").html(msg);
-            //alert( "Data Saved: " + msg );
+            $("#myHoroscope").html(data);
         });
-
 }
 
 
 updateHoroscope = function() {
-    //console.log("knappen fungerar");
     var personNR = $("#personNummer").val();
-    //console.log($personNummer);
     if(personNR !== ""){
     $.ajax({
-    type: "POST",
+    type: "PUT",
     url: "./updateHoroscope.php",
     data: { personNR: personNR}
         })
     .done(function(msg) {
-        //$("#myHoroscope").html(msg);
-        //alert( "Data Saved: " + msg );
         location.reload();
     });
     viewHoroscope();
