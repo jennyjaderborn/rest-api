@@ -39,17 +39,23 @@ function checkHoroscope($persnr){
             return $horoscope;
         }
         else if($persnr[4] . $persnr[5] >= 21){
-            echo $tvilling;
+            $horoscope = "<img src='./img/gemini.png'><h2>Tvillingarna</h2><p>Kvick, kommunikativ, ytlig, nyfiken, självständig, modig, impulsiv, stressad.<br/> 
+            Element: Luft 💨</p>";
+            return $horoscope;
         }
     }
 
 //juni månad
     if($persnr[2] . $persnr[3] == 06){
         if($persnr[4] . $persnr[5] <= 21){
-            echo $tvilling;   
+            $horoscope = "<img src='./img/gemini.png'><h2>Tvillingarna</h2><p>Kvick, kommunikativ, ytlig, nyfiken, självständig, modig, impulsiv, stressad.<br/> 
+            Element: Luft 💨</p>";
+            return $horoscope;   
         }
         else if($persnr[4] . $persnr[5] >= 22){
-            echo $kräfta;
+            $horoscope = "<img src='./img/cancer.png'><h2>Kräftan</h2><p>Föräldern, beskyddaren, bevararen, den trofaste, den lojale & sympatiske.<br/> 
+            Element: Vatten 🌊</p>";
+            return $horoscope;  
         }
     }
 
@@ -57,10 +63,14 @@ function checkHoroscope($persnr){
 
 if($persnr[2] . $persnr[3] == 07){
     if($persnr[4] . $persnr[5] <= 22){
-        echo $kräfta;
+        $horoscope = "<img src='./img/cancer.png'><h2>Kräftan</h2><p>Föräldern, beskyddaren, bevararen, den trofaste, den lojale & sympatiske.<br/> 
+        Element: Vatten 🌊</p>";
+        return $horoscope;  
     }
     else if($persnr[4] . $persnr[5] >= 23){
-        echo $lejon;
+        $horoscope = "<img src='./img/leo.png'><h2>Lejonet</h2><p>Storsint, kärleksfull, viljestark, svarsjuk, ledare, trofast, plikttrogen.<br/> 
+        Element: Solen ☀️</p>";
+        return $horoscope;  
     }
 }
 
@@ -68,10 +78,14 @@ if($persnr[2] . $persnr[3] == 07){
 
         if($persnr[2] . $persnr[3] == "08"){
             if($persnr[4] . $persnr[5] <= 22){
-                echo $lejon;
+                $horoscope = "<img src='./img/leo.png'><h2>Lejonet</h2><p>Storsint, kärleksfull, viljestark, svarsjuk, ledare, trofast, plikttrogen.<br/> 
+                Element: Solen ☀️</p>";
+                return $horoscope;  
             }
             else if($persnr[4] . $persnr[5] >= 23){
-                echo $jungfru;
+                $horoscope = "<img src='./img/virgo.png'><h2>Jungfrun</h2><p>Blyg, självmedveten, analytisk, produktiv, kritisk, föränderlig.<br/> 
+                Element: Jord 🌎</p>";
+                return $horoscope;  
             }
         }
 
@@ -80,10 +94,14 @@ if($persnr[2] . $persnr[3] == 07){
 
     if($persnr[2] . $persnr[3] == "09"){
         if($persnr[4] . $persnr[5] <= 22){
-            echo $jungfru;
+            $horoscope = "<img src='./img/virgo.png'><h2>Jungfrun</h2><p>Blyg, självmedveten, analytisk, produktiv, kritisk, föränderlig.<br/> 
+            Element: Jord 🌎</p>";
+            return $horoscope;  
         }
         else if($persnr[4] . $persnr[5] >= 23){
-            echo $våg;
+            $horoscope = "<img src='./img/libra.png'><h2>Vågen</h2><p>Förälskelse, charm, obeslutsamhet, förföriskhet, diplomati, social kompetens.<br/> 
+            Element: Luft 💨</p>";
+            return $horoscope;  
         }
     }
 
@@ -91,10 +109,14 @@ if($persnr[2] . $persnr[3] == 07){
 
     if($persnr[2] . $persnr[3] == 10){
         if($persnr[4] . $persnr[5] <= 22){
-            echo $våg;
+            $horoscope = "<img src='./img/libra.png'><h2>Vågen</h2><p>Förälskelse, charm, obeslutsamhet, förföriskhet, diplomati, social kompetens.<br/> 
+            Element: Luft 💨</p>";
+            return $horoscope;  
         }
         else if($persnr[4] . $persnr[5] >= 23){
-            echo $skorpion;
+            $horoscope = "<img src='./img/scorpio.png'><h2>Skorpionen</h2><p>Intensiv, svarsjuk, passionerad, tystlåten, intensiv, lojal, modig, stark.<br/> 
+            Element: Vatten 🌊</p>";
+            return $horoscope; 
         }
     }
 
@@ -102,10 +124,14 @@ if($persnr[2] . $persnr[3] == 07){
 
     if($persnr[2] . $persnr[3] == 11){
         if($persnr[4] . $persnr[5] <= 21){
-            echo $skorpion;
+            $horoscope = "<img src='./img/scorpio.png'><h2>Skorpionen</h2><p>Intensiv, svarsjuk, passionerad, tystlåten, intensiv, lojal, modig, stark.<br/> 
+            Element:  Vatten 🌊</p>";
+            return $horoscope; 
         }
         else if($persnr[4] . $persnr[5] >= 22){
-            echo $skytt;
+            $horoscope = "<img src='./img/sagittarius.png'><h2>Skytten</h2><p>Ärlig, generös, idealistisk, optimistisk, överdrivande, entusiastisk, sökare.<br/> 
+            Element: Eld 🔥</p>";
+            return $horoscope; 
         }
     }
 
@@ -113,10 +139,14 @@ if($persnr[2] . $persnr[3] == 07){
 
     if($persnr[2] . $persnr[3] == 12){
         if($persnr[4] . $persnr[5] <= 21){
-            echo $skytt;
+            $horoscope = "<img src='./img/sagittarius.png'><h2>Skytten</h2><p>Ärlig, generös, idealistisk, optimistisk, överdrivande, entusiastisk, sökare.<br/> 
+            Element: Eld 🔥</p>";
+            return $horoscope; 
         }
         else if($persnr[4] . $persnr[5] >= 22){
-            echo $stenbock;
+            $horoscope = "<img src='./img/capricorn.png'><h2>Stenbocken</h2><p>Tillbakadragen, blyg, trogen, pliktkänsla, ambitiös, lojal.<br/> 
+            Element: Jord 🌎</p>";
+            return $horoscope; 
         }
     }
 
@@ -124,10 +154,14 @@ if($persnr[2] . $persnr[3] == 07){
 
     if($persnr[2] . $persnr[3] == 01){
         if($persnr[4] . $persnr[5] <= 19){
-            echo $stenbock;
+            $horoscope = "<img src='./img/capricorn.png'><h2>Stenbocken</h2><p>Tillbakadragen, blyg, trogen, pliktkänsla, ambitiös, lojal.<br/> 
+            Element: Jord 🌎</p>";
+            return $horoscope; 
         }
         else if($persnr[4] . $persnr[5] >= 20){
-            echo $vattuman;
+            $horoscope = "<img src='./img/aquarius.png'><h2>Vattumannen</h2><p>Fredsälskare, klarsynt, intuitiv, lojal, uppfinningsrik, revolutionär.<br/> 
+            Element: Luft 💨</p>";
+            return $horoscope; 
         }
     }
 
@@ -135,10 +169,14 @@ if($persnr[2] . $persnr[3] == 07){
 
     if($persnr[2] . $persnr[3] == 02){
         if($persnr[4] . $persnr[5] <= 18){
-            echo $vattuman;
+            $horoscope = "<img src='./img/aquarius.png'><h2>Vattumannen</h2><p>Fredsälskare, klarsynt, intuitiv, lojal, uppfinningsrik, revolutionär.<br/> 
+            Element: Luft 💨</p>";
+            return $horoscope; 
         }
         else if($persnr[4] . $persnr[5] >= 19){
-            echo $fisk;
+            $horoscope = "<img src='./img/pisces.png'><h2>Fiskarna</h2><p>Empati, human, slarvig, vänlig, hemlighetsfull, lättpåverkad, inspirerande.<br/> 
+            Element: Vatten 🌊</p>";
+            return $horoscope;
         }
     }
 
