@@ -50,6 +50,30 @@ deleteHoroscope = function() {
 }
 
 
+updateHoroscope = function() {
+    //console.log("knappen fungerar");
+    var personNR = $("#personNummer").val();
+    //console.log($personNummer);
+    if(personNR !== ""){
+    $.ajax({
+    type: "POST",
+    url: "./updateHoroscope.php",
+    data: { personNR: personNR}
+        })
+    .done(function(msg) {
+        //$("#myHoroscope").html(msg);
+        //alert( "Data Saved: " + msg );
+        location.reload();
+    });
+    viewHoroscope();
+}
+else {
+    alert("skriv pers");
+}
+}
+
+
+
 });
 
 
