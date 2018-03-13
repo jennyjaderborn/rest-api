@@ -28,7 +28,7 @@ function viewHoroscope(){
         type: "GET",
         url: "./viewHoroScope.php",
             })
-        .done(function( msg ) {
+        .done(function( data ) {
             $("#myHoroscope").html(data);
             
         });
@@ -40,7 +40,7 @@ deleteHoroscope = function() {
         type: "DELETE",
         url: "./deleteHoroscope.php",
             })
-        .done(function( msg ) {
+        .done(function( data ) {
             $("#myHoroscope").html(data);
         });
 }
@@ -54,7 +54,7 @@ updateHoroscope = function() {
     url: "./updateHoroscope.php",
     data: { personNR: personNR}
         })
-    .done(function(msg) {
+    .done(function(data) {
         location.reload();
     });
     viewHoroscope();

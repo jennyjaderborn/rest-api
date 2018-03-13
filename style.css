@@ -1,0 +1,27 @@
+body {
+    background-color: black;
+}
+
+.rubrik {
+    color: white;
+    text-align: center;
+    font-family: 'Special Elite', cursive;
+    font-size: 34px;
+    letter-spacing: 2px;
+}
+
+#myHoroscope {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-family: 'Special Elite', cursive;
+    letter-spacing: 2px;
+}
+
+p {
+    text-align: center;
+}
+
+
