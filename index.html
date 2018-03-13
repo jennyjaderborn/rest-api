@@ -5,14 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+    img {
+        width: 200px;
+    }
+    </style>
 </head>
 <body>
+
     <div id="myHoroscope"></div>
     
-    <input type="number" placeholder="YYMMDD"/>
+    <input id="personNummer" type="number" placeholder="YYMMDD"/>
 
-    <button>Spara mitt horoskop</button>
+    <button id='saveButton' onclick="saveHoroscope()">Spara mitt horoskop</button>
+
+    <!--Knapp: "spara mitt horoskop"
+    onClick: ska göra ett anrop via fetch eller $.ajax till
+     addHoroscope.php med innehållet i input:en. Efter anropet,
+      ska innehållet i div:en uppdateras.
+    -->
+
+    <button onclick="deleteHoroscope()">Radera mitt horoskop</button>
     <button>Uppdatera mitt horoskop</button>
-    <button>Radera mitt horoskop</button>
+
+    <script src="script.js"></script>
 </body>
 </html>
