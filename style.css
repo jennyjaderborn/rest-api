@@ -24,4 +24,34 @@ p {
     text-align: center;
 }
 
+.inputRuta {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+input {
+    width: 200px;
+    height: 20px;
+    margin-top: 20px;
+}
+
+button {
+    width: 150px;
+    height: 30px;
+    text-transform: none;
+    text-shadow: none;
+    margin: 10px;
+}
+
+img {
+    width: 200px;
+}
+
+.fel {
+    color: red;
+}
 

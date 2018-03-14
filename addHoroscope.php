@@ -8,12 +8,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
         if(!isset($_SESSION['horoscope'])){
-            echo "true";
+            echo true;
             $_SESSION['horoscope'] = checkHoroscope($persnr);
             
         }
         else {
-            echo "ditt horoskop är redan sparat!";
+           echo false;
         }
         
     }

@@ -5,7 +5,7 @@ viewHoroscope();
     saveHoroscope = function() {
     var personNR = $("#personNummer").val();
 
-    if(personNR !== ""){
+    if(personNR !== null){
     $.ajax({
     type: "POST",
     url: "./addHoroscope.php",
