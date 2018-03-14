@@ -157,6 +157,12 @@ if($persnr[2] . $persnr[3] == 07){
             
         }
     }
+
+    if($persnr[2] . $persnr[3] > 12 && $persnr[4] . $persnr[5] < 31){
+        echo false;
+    }
+
+
 return $horoscope;
  
 }
