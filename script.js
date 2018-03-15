@@ -42,6 +42,7 @@ deleteHoroscope = function() {
             })
         .done(function( data ) {
             $("#myHoroscope").html(data);
+            viewHoroscope();
         });
 }
 
